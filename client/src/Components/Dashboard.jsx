@@ -97,7 +97,7 @@ const Dashboard = () => {
                 <textarea
                     value={task.task}
                     onChange={(e) => setTask({ ...task, task: e.target.value.split(',') })}
-                    placeholder="Enter tasks separated by commas"
+                    placeholder="Enter task here..."
                     required
                 />
                 <button type="submit">Create Task</button>
