@@ -5,15 +5,13 @@ exports.createTask = async (req, res, next) => {
     try {
         const { date, task } = req.body;
 
-        // Send task data to prediction endpoint
         const response = await axios.post('http://localhost:6000/api/predict', { task });
         const category = response.data.prediction[0];
 
-        // Create new task with category
         const newTask = new Task({
             date: date,
             task: task,
-            category: category // Add category to task data
+            category: category
         });
 
         const savedTask = await newTask.save();
