@@ -12,7 +12,7 @@ import nltk
 from nltk.corpus import stopwords
 
 # Load data
-df = pd.read_excel("sample_task_categorization.xlsx")
+df = pd.read_excel("combined_glass_categorisation.xlsx")
 nltk.download('stopwords')
 
 # Define text cleaning function
