@@ -140,7 +140,6 @@ exports.deletealltasks = async(req,res,next) =>{
         res.status(500).json({ message: 'Error deleting all tasks' });
     }
 }
-
 exports.deleteTasksForDate = async (req, res, next) => {
     try {
       const { date } = req.params;
